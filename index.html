@@ -12,7 +12,7 @@
    
 </body>
 <script>
-    let age = prompt('How old are you?', 18);
+  1)  let age = prompt('How old are you?', 18);
 
     function checkAge(age) {
         if (age >= 18) {
@@ -32,12 +32,32 @@
     }
 
     name();
+    
 
     if (checkAge(age)) {
         alert('Access granted');
     } else {
         alert('Access denied');
     }
+    
+    =================================================
+        
+        
+ 2)          function showPrimes(n) {
+            nextPrime: for (let i = 2; i < n; i++) {
+
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        continue nextPrime;
+                    }
+                }
+
+                document.write(i); // a prime
+            }
+        }
+        showPrimes(10);
+    
+    
 </script>
 
 </html>
