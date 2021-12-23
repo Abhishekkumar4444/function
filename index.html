@@ -87,6 +87,75 @@
   }
   return true;
 }
+    
+    ==============================================================
+        
+4)           let user = prompt("enter user name?", "");
+        if (user === "Admin") {
+            let pass = prompt("enter the password", "");
+            if (pass === "master") {
+                alert("Welcome");
+            } else if (pass === "" || pass === null) {
+                alert("canceled");
+            } else {
+                alert("wrong password");
+            }
+        } else if (user === "" || user === null) {
+            alert("canceled");
+        } else {
+            alert("i dont know you")
+        }
+
+        let login = prompt("Who's there? " + " Answer : ((Admin))"); // Admin Question
+        let usr = "Admin"; // Admin
+        let pwd = "TheMaster"; // Password
+        if (login === "" || login === null) {
+            // Empty feild || null is cancel button or Esc
+            alert("Canceled"); // Message
+        } else if (login != usr) {
+            // if Admin is have wrong value
+            alert("I don't know you"); // Message
+        } else {
+            // if login == usr
+            login = prompt("Password?" + "Answer : ((TheMaster))"); // show password question
+            if (login == null || login == "") {
+                // Empty feild || null is cancel button or Esc
+                alert("Canceled"); // Message
+            } else {
+                login == pwd ? alert("Welcome!") : alert("Wrong password"); // if Pasword is true : if Password is wrong
+            }
+        }
+
+        function sayHi() {
+            alert("Hello");
+        }
+
+        alert(sayHi);
+
+        let age = +prompt("enter your age ");
+        let welcome = (age < 18) ? function() {
+            alert("child");
+        } : function() {
+            alert("adult");
+        }
+
+        welcome();
+
+
+        let age = +prompt("enter your age");
+        let message = (age < 18) ?
+            alert("child") : alert("adult");
+        // alert(message);
+
+        let age = +prompt("enter your age");
+        let message = (age < 3) ? () => alert("Hi babi!!") :
+            (age < 18) ? () => alert("hello!!") :
+            (age < 100) ? () => alert("greetings") :
+            () => alert("bhhot");
+        message();
+        window.onload = () => confirm("Do you agree?") ? alert("You agreed.") : alert("You canceled the execution.");
+        (() => confirm("Do you agree?") ? alert("You agreed") : alert("You interrupted execution"))()
+        alert(1.23e-6);
 </script>
 
 </html>
